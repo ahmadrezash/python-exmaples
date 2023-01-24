@@ -1,1 +1,3 @@
-# python-exmaples
+# Examples
+
+1. [XO Game](./xo)
