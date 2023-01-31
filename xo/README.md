@@ -4,9 +4,14 @@
     - prevent same value set
 - Step2 ([here](./step2.py)):
     - add loop for repeating
-
-1. check valid input (range, unsupported input, ...)
-1. add turn
-1. add check win
+- Step3 ([here](./step3.py))
+    - check valid input (range, unsupported input, ...)
+    - if input not int
+    - if input not 1 to 9
+    - try, if, type cast
+- Step4 ([here](./step4.py)):
+    - add turn 
+    - add check win
+    - for, elif, array
 1. add check finish
 1. add functions
