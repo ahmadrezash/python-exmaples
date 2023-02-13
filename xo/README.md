@@ -13,5 +13,8 @@
     - add turn 
     - add check win
     - for, elif, array
-1. add check finish
-1. add functions
+- Step5 ([here](./step5.py))
+    - check end of game
+    - print winner
+- Step6 ([here](./step6.py))
+    - add functions
