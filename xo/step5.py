@@ -5,11 +5,13 @@ is_continue = True
 
 while True:
     turn = input("Who is first?(X/O)\n")
-    if turn == "X" or "O":
+    if turn == "X" or turn == "O":
         break
+    else:
+        print("=========== Please Choose 'X' or 'O' ===========")
 
 while is_continue:
-    print("===========",turn," turn =============")
+    print("===========",turn,"turn =============")
     print(board[0],board[1],board[2])
     print(board[3],board[4],board[5])
     print(board[6],board[7],board[8])
