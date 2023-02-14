@@ -2,6 +2,12 @@ board = [1,2,3,4,5,6,7,8,9]
 turn = "X" # X, O
 winner = ""
 is_continue = True
+
+while True:
+    turn = input("Who is first?(X/O)\n")
+    if turn == "X" or "O":
+        break
+
 while is_continue:
     print("===========",turn," turn =============")
     print(board[0],board[1],board[2])
@@ -11,27 +17,30 @@ while is_continue:
     # Get input
     n = input("get index:\n")
 
+    # Chck input
     try:
         n = int(n)
     except:
-        print("=======Nemishe...=======")
+        print("======= Invalid input ...=======")
         continue
 
-    # Chck input
-    if 1<=n<=9 and board[n-1] != "X" and board[n-1] != "O":
-        board[n-1] = turn
-    else:
-        print("\n=======Nemishe...=======")
+    if not 1<=n<=9:
+        print("======= Invalid input ...=======")
         continue
+    
+    if board[n-1] == "X" or board[n-1] == "O":
+        print("======= This cell is full ...=======")
+        continue        
+    
+    # Set value
+    board[n-1] = turn
 
     # Check winners
     # vertically - horizontally - x
     if board[0] == board[1] == board[2] or board[3] == board[4] == board[5] or board[6] == board[7] == board[8] or \
     board[0] == board[3] == board[6] or board[1] == board[4] == board[7] or board[2] == board[5] == board[8] or \
     board[0] == board[4] == board[8] or board[2] == board[4] == board[6] :
-
-       print('============================',turn," is won!!!! ==================")
-       winner = True
+       winner = turn
        is_continue = False
 
     # Check game is finished or not
