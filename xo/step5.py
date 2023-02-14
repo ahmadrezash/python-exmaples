@@ -1,5 +1,5 @@
 board = [1,2,3,4,5,6,7,8,9]
-turn = "X" # X, O
+turn = "" # X, O
 winner = ""
 is_continue = True
 
@@ -10,6 +10,7 @@ while True:
     else:
         print("=========== Please Choose 'X' or 'O' ===========")
 
+# main loop
 while is_continue:
     print("===========",turn,"turn =============")
     print(board[0],board[1],board[2])
@@ -57,6 +58,8 @@ while is_continue:
             turn = "O"
         elif turn == "O":
             turn = "X"
+
+# report result
 if winner:
     print("========================== ",winner,"won ==========================")
 else:
